@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.d21102cf.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.4aa6d1b2.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.4aa6d1b2.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.c3c4442c.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.c3c4442c.js.map",
+    "static/js/2.09de61b0.chunk.js": "/shopping-cart/static/js/2.09de61b0.chunk.js",
+    "static/js/2.09de61b0.chunk.js.map": "/shopping-cart/static/js/2.09de61b0.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.d21102cf.chunk.css.map": "/shopping-cart/static/css/main.d21102cf.chunk.css.map",
+    "static/js/2.09de61b0.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.09de61b0.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/shopping-cart/static/media/Oswald-Regular.19286529.ttf",
+    "static/media/ibanez-rg8-white.185b1508.jpg": "/shopping-cart/static/media/ibanez-rg8-white.185b1508.jpg",
+    "static/media/kiesel-a8h.722f219d.jpg": "/shopping-cart/static/media/kiesel-a8h.722f219d.jpg",
+    "static/media/kiesel-cm8.3c85076b.jpg": "/shopping-cart/static/media/kiesel-cm8.3c85076b.jpg",
+    "static/media/kiesel-om8.f4f06aa0.jpg": "/shopping-cart/static/media/kiesel-om8.f4f06aa0.jpg",
+    "static/media/kiesel-vader-teal.49d2262b.jpg": "/shopping-cart/static/media/kiesel-vader-teal.49d2262b.jpg",
+    "static/media/larada-8-blue.21ab6f1e.jpg": "/shopping-cart/static/media/larada-8-blue.21ab6f1e.jpg",
+    "static/media/larada-8-solar.b3862328.jpg": "/shopping-cart/static/media/larada-8-solar.b3862328.jpg",
+    "static/media/strandberg-longfield.415f9b71.png": "/shopping-cart/static/media/strandberg-longfield.415f9b71.png",
+    "static/media/strandberg-tt-purple.be657e75.png": "/shopping-cart/static/media/strandberg-tt-purple.be657e75.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3c4442c.js",
+    "static/js/2.09de61b0.chunk.js",
+    "static/css/main.d21102cf.chunk.css",
+    "static/js/main.4aa6d1b2.chunk.js"
+  ]
+}
