@@ -1,10 +1,39 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url("./assets/fonts/static/Oswald-Regular.ttf") format("ttf");
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-family: "Oswald";
+}
+
 body {
+  background-color: #162f49;
+  color: #e3e3e3;
+  display: flex;
+  justify-content: center;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Oswald',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100vw;
 }
 
 code {
