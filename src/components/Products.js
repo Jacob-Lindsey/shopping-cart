@@ -11,7 +11,7 @@ const Products = ({ match }) => {
   const linkList = guitarProductData.map((product) => {
     return (
       <ListItem key={product.id}>
-        <Link to={`${url}/${product.id}`}>{product.name}</Link>
+        <LinkSizer to={`${url}/${product.id}`}>{product.name}</LinkSizer>
       </ListItem>
     );
   });
@@ -79,4 +79,10 @@ const ListItem = styled.div`
   &:hover {
     background-color: #1d4168;
   }
+`;
+
+const LinkSizer = styled(Link)`
+  display: block;
+  height: 100%;
+
 `;
