@@ -6,16 +6,39 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import Products from './components/Products'
 import Cart from './components/Cart'
+import Routes from './Routes'
+import { guitarProductData } from './components/GuitarProductData'
 
 function App () {
 
   const [cartData, setCartData] = useState([]);
-  const [currentItem, setCurrentItem] = useState([]);
+
+
+  const addCartItem = (newItem) => {
+    const alreadyInCart = cartData.map((cItem) => cItem.id).includes(newItem.id);
+    if (alreadyInCart) {
+      changeQuantity(newItem.id, 1);
+    } else {
+      setCartData([...cartData, newItem]);
+    }
+  };
+
+  const deleteCartItem = (id) => setCartData(cartData.filter((item) => item.id !== id));
+
+  const changeQuantity = (id, delta) =>
+    setCartData(
+      cartData.map(
+        (item) => (item.id === id ? { ...item, quantity: item.quantity + delta } : item)
+      )
+    );
+      
+  const findItem = (id) => guitarProductData.find((item) => item.id === id);
+
+  const cartItemsQuantity = cartData.reduce((a, c) => a + c.quantity, 0);
+
   const _store = {
     cartData,
-    currentItem,
     setCartData,
-    setCurrentItem,
   }
 
   return (
@@ -23,11 +46,11 @@ function App () {
       <AppWrapper>
         <Nav />
         <ContentWrapper>
-          <Switch>
-            <Route exact path='/'><Home /></Route>
-            <Route path='/products'><Products /></Route>
-            <Route path='/cart'><Cart /></Route>
-          </Switch>
+          <Routes
+            items={cartData}
+            addCartItem={addCartItem}
+            deleteCartItem={deleteCartItem}
+          />
         </ContentWrapper>
       </AppWrapper>
     </Store.Provider>

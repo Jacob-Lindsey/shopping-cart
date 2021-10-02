@@ -47,7 +47,9 @@ const ListItemWrapper = styled.li`
 `;
 
 const LinkItem = styled(Link)`
+  display: block;
   font-size: 1.7rem;
   font-weight: 300;
+  height: 100%;
   line-height: 2rem;
 `;

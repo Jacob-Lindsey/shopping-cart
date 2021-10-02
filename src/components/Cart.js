@@ -1,24 +1,29 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import Store from "../Store";
 import CartItem from "./CartItem";
 import ListLabels from "./ListLabels";
 
-const Cart = () => {
+const Cart = ({ deleteCartItem, items }) => {
 
-  const _store = useContext(Store);
+  const cartIsEmpty = items.length === 0 ? true : false;
+
+  if (cartIsEmpty) {
+    return (
+      <Wrapper>
+        <EmptyWrapper>CART IS EMPTY</EmptyWrapper>
+      </Wrapper>
+    )
+  }
 
   return (
     <Wrapper>
       <ListLabels />
       <CartWrapper>
-        {_store.cartData.map(d => {
+        {items.map((item) => {
           return <CartItem
-                    key={d.id}
-                    name={d.name}
-                    details={d.description}
-                    price={d.price}
-                    quantity={d.quantity}
+                    key={item.id}
+                    {...item}
+                    deleteCartItem={deleteCartItem}
                   />;
         })}
       </CartWrapper>
@@ -32,6 +37,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+const EmptyWrapper = styled.div`
+  line-height: 15rem;
+  text-align: center;
 `;
 
 const CartWrapper = styled.div`

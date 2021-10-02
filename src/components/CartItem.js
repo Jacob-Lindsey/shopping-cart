@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const CartItem = (props) => {
+const CartItem = ({ id, name, url, details, quantity, price, deleteCartItem }) => {
 
-  let price = parseFloat(props.price);
-  let total = (props.price);
+  let total = (price * quantity);
+  const handleDelete = () => deleteCartItem(id);
 
   return (
     <CartItemWrapper>
         <Image src='/'></Image>
         <div>
-          <Name>{props.name}</Name>
-          <Details>{props.details}</Details>
+          <Name>{name}</Name>
+          <Details>{details}</Details>
         </div>
         <Price>{price}</Price>
-        <Quantity>{props.quantity}</Quantity>
+        <Quantity>{quantity}</Quantity>
+        <EditQuantity onClick={handleDelete}>X</EditQuantity>
         <ItemDetail />
         <Total>{total}</Total>
     </CartItemWrapper>    
@@ -27,7 +28,7 @@ const CartItemWrapper = styled.div`
   background-color: #21466e;
   border-bottom: 2px solid #476a8f;
   display: grid;
-  grid-template-columns: 1fr 30% 0.5fr 0.5fr 0.5fr 1fr;
+  grid-template-columns: 1fr 30% 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
   padding: 1.5rem 0.5rem 0 0.5rem;
   width: 100%;
   &:first-child {
@@ -52,8 +53,22 @@ const Name = styled.div`
 `;
 
 const Details = styled.div`
+  position: relative;
   font-size: 0.95rem;
   font-weight: 300;
+  max-height: 50%;
+  max-width: 90%;
+  overflow: hidden;
+  &::after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1.2em;
+    background: linear-gradient(to bottom, rgba(33, 70, 110, 0), rgba(33, 70, 110, 1) 100%);
+  }
 `;
 
 const Price = styled.div`
@@ -62,7 +77,17 @@ const Price = styled.div`
 `;
 
 const Quantity = styled.div`
-  text-indent: 25%;
+  display: inline-block;
+  text-indent: 45%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`;
+
+const EditQuantity = styled.div`
+  color: red;
+  cursor: pointer;
+  font-size: 2rem;
+  text-indent: 40%;
 `;
 
 const Total = styled.div`

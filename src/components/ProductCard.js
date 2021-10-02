@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import AddToCartButton from "./AddToCartButton";
 
-const ProductCard = ({ data }) => {
-    const { productId } = useParams();
-    const product = data.find(p => p.id === Number(productId));
+const ProductCard = ({ item, handleAdd }) => {
+    const product = item;
     let productData;
-    const isAvailable = (product.status === 'Available') ? true : false;
+    // const isAvailable = (product.status === 'Available') ? true : false;
 
     if (product) {
         productData = (
@@ -17,15 +15,9 @@ const ProductCard = ({ data }) => {
                 </ProductImageWrapper>
                 <ProductDetailsWrapper>
                     <ProductTitle>{product.name}</ProductTitle>
-                    <ProductDescription>{product.description}</ProductDescription>
-                    <StatusButtonWrapper>
-                        <AddToCartButton data={product} />
-                        {isAvailable
-                            ? <Available>In Stock</Available>
-                            : <OutOfStock>Out of Stock</OutOfStock>
-                        }
-                    </StatusButtonWrapper>
-                </ProductDetailsWrapper>
+                    <h3>Subtitle</h3>
+                    <h4>Price</h4>
+                </ProductDetailsWrapper>              
             </CardWrapper>
         );
     } else {
@@ -38,35 +30,57 @@ const ProductCard = ({ data }) => {
 export default ProductCard;
 
 const CardWrapper = styled.div`
-    display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    grid-template-rows: 1fr;
+    align-items: center;
+    border: 1px solid transparent;
+    display: flex;
+    flex: 0 1 300px;
+    flex-direction: column;
+    margin: 5px 5px 10px;
+    padding-bottom: 10px;
+    transition: 0.25s ease;
     width: 100%;
+    &:hover {
+        border: 1px solid #a58769;
+      }
 `;
 
 const ProductImageWrapper = styled.div`
-    display: flex;
-    width: 100%;
+    height: 30vh;
+    width: 250px;
 `;
 
 const ProductImage = styled.img`
     margin: 0 auto;
-    max-height: 510px;
+    max-height: 450px;
+    width: 250px;
 `;
 
 const ProductDetailsWrapper = styled.div`
+    align-items: center;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    padding: 1rem 0 0 1rem;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
     width: 100%;
+    & > h3 {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    & > h4 {
+        margin-bottom: 0;
+        margin-top:3px;
+    }
 `;
 
 const ProductTitle = styled.h1`
-    border-bottom: 1px solid #e3e3e3;
-    font-size: 2rem;
-    font-weight: 200;
-    padding-bottom: 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
     text-transform: uppercase;
+    width: 100%;
 `;
 
 const ProductDescription = styled.p`
@@ -74,14 +88,6 @@ const ProductDescription = styled.p`
     flex-shrink: 0;
     letter-spacing: 0.02rem;
     word-spacing: 0.06rem;
-`;
-
-const StatusButtonWrapper = styled.div`
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 95%;
 `;
 
 const Available = styled.h4`

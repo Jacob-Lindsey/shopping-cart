@@ -15,9 +15,9 @@ export const guitarProductData = [
       color: "Black",
       description: "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings.",
       status: "Available",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img1}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 2,
@@ -26,9 +26,9 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings.",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img2}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 3,
@@ -37,9 +37,9 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
       status: "Available",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img3}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 4,
@@ -48,9 +48,9 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img4}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 5,
@@ -59,9 +59,9 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img5}`,
-      quantity: 0,
+      quantity: 1,
     },  
     {
       id: 6,
@@ -70,9 +70,9 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img6}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 7,
@@ -81,9 +81,9 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img7}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 8,
@@ -92,9 +92,9 @@ export const guitarProductData = [
       description:
         "The Boden Metal 8 Sarah Longfield Edition is the 8-string version with the base specs of the Metal 8 and Sarah’s unique Black Doppler gloss finish. This model features a chambered American Basswood body with a quarter-inch Maple top and Roasted Maple neck with Ebony fretboard for strong focused lows, rich mids and brilliant highs.",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img8}`,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 9,
@@ -103,8 +103,8 @@ export const guitarProductData = [
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
       status: "Out of Stock",
-      price: "1599.99",
+      price: 1599.99,
       url: `${img9}`,
-      quantity: 0,
+      quantity: 1,
     },
   ];

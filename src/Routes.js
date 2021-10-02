@@ -1,45 +1,39 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components';
-import Store from "./Store";
 import Home from './components/Home';
 import Products from './components/Products';
 import Cart from './components/Cart';
+import ProductDetail from './components/ProductDetail';
 
-export default function Routes () {
+const Routes = ({ items, addCartItem, deleteCartItem }) => {
   return (
-    <BrowserRouter>
-      <div>
-        <NavWrapper>
-            <NavUL>
-                <li>
-                    <Link to='/'>Home</Link>
-                </li>
-                <li>
-                    <Link to='/products'>Products</Link>
-                </li>
-                <li>
-                    <Link to='/cart'>Cart</Link>
-                </li>
-            </NavUL>
-        </NavWrapper>
-
-        <Switch>
-          <Route exact path='/'><Home /></Route>
-          <Route path='/products'><Products /></Route>
-          <Route path='/cart'><Cart /></Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
-  )
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/products" component={Products} />
+        <Route
+          exact
+          path="/producst/:id"
+          render={(routeProps) => (
+            <ProductDetail
+              data={routeProps.match.params.id}
+              addCartItem={addCartItem}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/cart"
+          render={() => (
+            <Cart
+              items={items}
+              deleteCartItem={deleteCartItem}
+            />
+          )}
+        />
+        ;
+      </Switch>
+  );
 };
 
-const NavWrapper = styled.nav`
-    width: 100%;
-`;
-
-const NavUL = styled.ul`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-`;
+export default Routes;
