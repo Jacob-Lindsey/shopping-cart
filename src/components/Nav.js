@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-function Nav () {
+function Nav ({ cartSize }) {
   return (
       <NavWrapper>
         <NavUL>
@@ -13,7 +13,7 @@ function Nav () {
             <LinkItem to='/products'>Products</LinkItem>
           </ListItemWrapper>
           <ListItemWrapper>
-            <LinkItem to='/cart'>Cart</LinkItem>
+            <LinkItem to='/cart'>Cart ({cartSize})</LinkItem>
           </ListItemWrapper>
         </NavUL>
       </NavWrapper>
@@ -51,5 +51,5 @@ const LinkItem = styled(Link)`
   font-size: 1.7rem;
   font-weight: 300;
   height: 100%;
-  line-height: 2rem;
+  line-height: 3rem;
 `;

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-const AddToCartButton = ({ items, addCartItem }) => {
+const AddToCartButton = ({ item, addCartItem, changeCartCounter }) => {
 
   const handleClick = () => {
-    addCartItem(items);
+    addCartItem(item);
+    changeCartCounter(1);
     // addToCart(props.data);
   }
 
@@ -20,13 +21,17 @@ const AddToCartButton = ({ items, addCartItem }) => {
 export default AddToCartButton
 
 const ButtonWrapper = styled.button`
-    background-color: lightgray;
+    background-color: #718a33;
+    border: none;
+    color: white;
     cursor: pointer;
-    font-size: 1.0rem;
-    font-weight: 200;
-    height: 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    height: 5rem;
+    letter-spacing: 5.6px;
+    padding: 0.5rem;
     transition: all 0.2s ease;
-    width: 9rem;
+    width: 20rem;
     &:hover {
       background-color: #a1cf82;
     }

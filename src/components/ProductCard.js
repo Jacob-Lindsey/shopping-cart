@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
 
 const ProductCard = ({ item, handleAdd }) => {
     const product = item;
@@ -11,14 +10,15 @@ const ProductCard = ({ item, handleAdd }) => {
         productData = (
             <CardWrapper>
                 <ProductImageWrapper>
-                   <ProductImage src={product.url} /> 
+                <ProductImage src={product.url} /> 
                 </ProductImageWrapper>
                 <ProductDetailsWrapper>
                     <ProductTitle>{product.name}</ProductTitle>
-                    <h3>Subtitle</h3>
-                    <h4>Price</h4>
+                    <h3>{product.color}</h3>
+                    <h4>{product.price}</h4>
                 </ProductDetailsWrapper>              
             </CardWrapper>
+
         );
     } else {
         productData = <h2> Sorry. Product doesn't exist. </h2>
@@ -31,17 +31,36 @@ export default ProductCard;
 
 const CardWrapper = styled.div`
     align-items: center;
-    border: 1px solid transparent;
+    background-image: linear-gradient(45deg, rgb(17, 19, 19), rgb(35, 38, 40));
+    background-position-x: 50%;
+    background-position-y: 50%;
     display: flex;
-    flex: 0 1 300px;
+    flex: 0 1 350px;
     flex-direction: column;
     margin: 5px 5px 10px;
     padding-bottom: 10px;
-    transition: 0.25s ease;
-    width: 100%;
-    &:hover {
-        border: 1px solid #a58769;
-      }
+    position: relative;
+    z-index: 1;
+    &:before {
+        background: url(https://strandbergguitars.com/cdn-cgi/image/onerror=redirect,quality=85,format=auto,metadata=copyright,width=380,height=720,fit=cover/wp-content/uploads/2021/09/nx-nature-bg-metal.jpg) center center;
+        content: "";
+        margin: 0 auto;
+        opacity: 0;
+        outline: 1px solid transparent;
+        outline-offset: -10px;
+        position: absolute;
+        transition: all 0.45s ease;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;            
+    }
+    &:hover:before {
+        opacity: 1;
+        outline: 1px solid #a58769;
+        outline-offset: -10px;
+    }
 `;
 
 const ProductImageWrapper = styled.div`
@@ -62,42 +81,26 @@ const ProductDetailsWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 1rem;
-    width: 100%;
+    width: 90%;
     & > h3 {
+        font-weight: 400;
         margin-bottom: 0;
         margin-top: 5px;
     }
     & > h4 {
+        font-weight: 300;
         margin-bottom: 0;
         margin-top:3px;
     }
 `;
 
 const ProductTitle = styled.h1`
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1.1em;
+    font-weight: 400;
     margin-bottom: 5px;
     margin-top: 5px;
     text-align: center;
+    text-wrap: wrap;
     text-transform: uppercase;
     width: 100%;
-`;
-
-const ProductDescription = styled.p`
-    flex-basis: 33%;
-    flex-shrink: 0;
-    letter-spacing: 0.02rem;
-    word-spacing: 0.06rem;
-`;
-
-const Available = styled.h4`
-    color: palegreen;
-    font-size: 1.6rem;
-    width: 30%;
-`;
-
-const OutOfStock = styled.h4`
-    color: red;
-    font-size: 1.6rem;
-    width: 30%;
 `;

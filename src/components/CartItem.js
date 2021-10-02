@@ -4,7 +4,7 @@ import styled from "styled-components";
 const CartItem = ({ id, name, url, details, quantity, price, deleteCartItem }) => {
 
   let total = (price * quantity);
-  const handleDelete = () => deleteCartItem(id);
+  const handleDelete = () => deleteCartItem(id, quantity);
 
   return (
     <CartItemWrapper>

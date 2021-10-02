@@ -14,7 +14,7 @@ export const guitarProductData = [
       name: "Strandberg Boden NX",
       color: "Black",
       description: "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings.",
-      status: "Available",
+      status: "In Stock",
       price: 1599.99,
       url: `${img1}`,
       quantity: 1,
@@ -36,7 +36,7 @@ export const guitarProductData = [
       color: "Charcoal",
       description:
         "This Larada USA Master Series guitar features a roasted basswood body, paired with eastern hard rock roasted maple neck, and a richlite fingerboard. Each piece of wood is hand-selected, with great attention paid to quality and weight. Larada 8 string guitars feature multi-scale fanned frets, offering a fusion of optimal string tension with uncompromised playability. Each USA Master Series Larada comes equipped with Tosin Abasi’s signature Fishman Fluence pickups, Hipshot Tuners, and D’Addario NYXL strings",
-      status: "Available",
+      status: "In Stock",
       price: 1599.99,
       url: `${img3}`,
       quantity: 1,

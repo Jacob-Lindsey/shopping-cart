@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Store from './Store'
 import Nav from './components/Nav'
-import Home from './components/Home'
-import Products from './components/Products'
-import Cart from './components/Cart'
 import Routes from './Routes'
-import { guitarProductData } from './components/GuitarProductData'
 
 function App () {
 
   const [cartData, setCartData] = useState([]);
-
+  const [cartCounter, setCartCounter] = useState(0);
 
   const addCartItem = (newItem) => {
     const alreadyInCart = cartData.map((cItem) => cItem.id).includes(newItem.id);
@@ -23,7 +18,29 @@ function App () {
     }
   };
 
-  const deleteCartItem = (id) => setCartData(cartData.filter((item) => item.id !== id));
+  const deleteCartItem = (id, quantity) => {
+    const itemIndex = cartData.findIndex((i) => i.id === id);
+    changeCartCounter(0);
+    if (quantity === 1) {
+      removeItemFromCart(id);
+    } else {
+      if (itemIndex > -1) {
+        const newCart = cartData.slice();
+        newCart[itemIndex].quantity--;
+        setCartData(newCart);
+      } else {
+        console.error(
+          "Item doesn't exist in the cart."
+        );
+      }
+    } 
+  }
+
+  const changeCartCounter = (op) => {
+   op === 1 ?  setCartCounter(prev => prev + 1) : setCartCounter(prev => prev - 1);
+  }
+  
+  const removeItemFromCart = (id) => setCartData(cartData.filter((item) => item.id !== id));
 
   const changeQuantity = (id, delta) =>
     setCartData(
@@ -32,23 +49,26 @@ function App () {
       )
     );
       
-  const findItem = (id) => guitarProductData.find((item) => item.id === id);
+  // const findItem = (id) => guitarProductData.find((item) => item.id === id);
 
-  const cartItemsQuantity = cartData.reduce((a, c) => a + c.quantity, 0);
+  // const cartItemsQuantity = cartData.reduce((a, c) => a + c.quantity, 0);
 
   const _store = {
+    cartCounter,
     cartData,
+    setCartCounter,
     setCartData,
   }
 
   return (
     <Store.Provider value={_store}>
       <AppWrapper>
-        <Nav />
+        <Nav cartSize={cartCounter} />
         <ContentWrapper>
           <Routes
             items={cartData}
             addCartItem={addCartItem}
+            changeCartCounter={changeCartCounter}
             deleteCartItem={deleteCartItem}
           />
         </ContentWrapper>
@@ -68,6 +88,8 @@ const AppWrapper = styled.main`
 `;
 
 const ContentWrapper = styled.div`
+  dislay: flex;
+  justify-content: center;
   padding-top: 6rem;
   width: 100%;
 `;

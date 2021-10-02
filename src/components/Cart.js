@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CartItem from "./CartItem";
 import ListLabels from "./ListLabels";
 
-const Cart = ({ deleteCartItem, items }) => {
+const Cart = ({ deleteCartItem, items, changeCartCounter }) => {
 
   const cartIsEmpty = items.length === 0 ? true : false;
 
