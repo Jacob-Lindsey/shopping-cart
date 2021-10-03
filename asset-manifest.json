@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.b6b879cb.chunk.css",
-    "main.js": "/shopping-cart/static/js/main.27e83747.chunk.js",
-    "main.js.map": "/shopping-cart/static/js/main.27e83747.chunk.js.map",
+    "main.css": "/shopping-cart/static/css/main.676e54f8.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.50227938.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.50227938.chunk.js.map",
     "runtime-main.js": "/shopping-cart/static/js/runtime-main.c3c4442c.js",
     "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.c3c4442c.js.map",
-    "static/js/2.1d9d3663.chunk.js": "/shopping-cart/static/js/2.1d9d3663.chunk.js",
-    "static/js/2.1d9d3663.chunk.js.map": "/shopping-cart/static/js/2.1d9d3663.chunk.js.map",
+    "static/js/2.531a87aa.chunk.js": "/shopping-cart/static/js/2.531a87aa.chunk.js",
+    "static/js/2.531a87aa.chunk.js.map": "/shopping-cart/static/js/2.531a87aa.chunk.js.map",
     "index.html": "/shopping-cart/index.html",
-    "static/css/main.b6b879cb.chunk.css.map": "/shopping-cart/static/css/main.b6b879cb.chunk.css.map",
-    "static/js/2.1d9d3663.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.1d9d3663.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/shopping-cart/static/media/Oswald-Regular.19286529.ttf",
+    "static/css/main.676e54f8.chunk.css.map": "/shopping-cart/static/css/main.676e54f8.chunk.css.map",
+    "static/js/2.531a87aa.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.531a87aa.chunk.js.LICENSE.txt",
+    "static/media/Oswald-Regular.19286529.ttf": "/shopping-cart/static/media/Oswald-Regular.19286529.ttf",
+    "static/media/index.css": "/shopping-cart/static/media/purty-wood.ef89104f.png",
     "static/media/strandberg-boden-classic.9f385d46.png": "/shopping-cart/static/media/strandberg-boden-classic.9f385d46.png",
     "static/media/strandberg-boden-nx-black.73ba5131.png": "/shopping-cart/static/media/strandberg-boden-nx-black.73ba5131.png",
     "static/media/strandberg-longfield.415f9b71.png": "/shopping-cart/static/media/strandberg-longfield.415f9b71.png",
@@ -23,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3c4442c.js",
-    "static/js/2.1d9d3663.chunk.js",
-    "static/css/main.b6b879cb.chunk.css",
-    "static/js/main.27e83747.chunk.js"
+    "static/js/2.531a87aa.chunk.js",
+    "static/css/main.676e54f8.chunk.css",
+    "static/js/main.50227938.chunk.js"
   ]
 }
