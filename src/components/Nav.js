@@ -7,13 +7,25 @@ function Nav ({ cartSize }) {
       <NavWrapper>
         <NavUL>
           <ListItemWrapper>
-            <LinkItem to='/'>Home</LinkItem>
+            <LinkItem to='/'>HOME</LinkItem>
           </ListItemWrapper>
           <ListItemWrapper>
-            <LinkItem to='/products'>Products</LinkItem>
+            <LinkItem to='/products'>PRODUCTS</LinkItem>
           </ListItemWrapper>
           <ListItemWrapper>
-            <LinkItem to='/cart'>Cart ({cartSize})</LinkItem>
+            <LinkItem to='/'>AMPS</LinkItem>
+          </ListItemWrapper>
+          <ListItemWrapper>
+            <LinkItem to='/'>MODELING</LinkItem>
+          </ListItemWrapper>
+          <ListItemWrapper>
+            <LinkItem to='/'>CABS</LinkItem>
+          </ListItemWrapper>
+          <ListItemWrapper>
+            <LinkItem to='/'>ACCESSORIES</LinkItem>
+          </ListItemWrapper>
+          <ListItemWrapper>
+            <LinkItem to='/cart'>CART <span>{cartSize}</span></LinkItem>
           </ListItemWrapper>
         </NavUL>
       </NavWrapper>
@@ -31,7 +43,9 @@ const NavWrapper = styled.nav`
 const NavUL = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 1rem;
+  justify-content: flex-start;
+  padding: 0 10px;
   width: 100%;
 `;
 
@@ -40,16 +54,53 @@ const ListItemWrapper = styled.li`
   line-height: 2rem;
   text-align: center;
   transition: all 0.2s ease;
-  width: 15%;
-  &:hover {
-    border-bottom: 3px solid #29588b;
+  width: 8%;
+  &:last-child {
+    margin-left: auto;
   }
+  &:hover {
+    > a {
+      font-size: 1.22rem;
+    }
+    border-bottom: 3px solid #29588b;
+    color: #a5cde6;
+  }
+  &:last-child:hover {
+    > a {
+      color: palegreen;
+      font-size: 1.3rem;
+    }
+    > a > span {
+      background-color: palegreen;
+      height: 24px;
+      weight: 24px;
+    }
+  }
+  
 `;
 
 const LinkItem = styled(Link)`
+  color: forestgreen;
   display: block;
-  font-size: 1.7rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.2rem;
   font-weight: 300;
   height: 100%;
   line-height: 3rem;
+  & > span {
+    background-color: #eee;
+    border-radius: 50%;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 800;
+    height: 25px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 25px;
+    vertical-align: middle;
+  } 
 `;

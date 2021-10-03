@@ -25,20 +25,27 @@ const ListLabelsWrapper = styled.div`
 `;
 
 const LabelText = styled.span`
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-family: 'Oswald';
+    font-size: 1.4rem;
+    font-weight: 200;
+    letter-spacing: 1.4px;
     line-height: 4rem;
     &:first-child {
+        font-size: 2.5rem;
         padding-left: 1rem;
+        text-indent: 8px;
+    }
+    &:nth-child(2) {
+        text-indent: 1rem;
     }
     &:nth-child(3) {
-        text-indent: 0.3rem;
+        text-indent: -0.5rem;
     }
     &:nth-child(4) {
-        text-indent: 0.1rem;
+        text-indent: -1rem;
     }
     &:last-child {
         padding-right: 1rem;
-        text-align: right;
+        text-indent: 4rem;
     }
 `;

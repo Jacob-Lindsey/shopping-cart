@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import FontStyles from './GlobalStyle';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <FontStyles />
       <App />
     </BrowserRouter>
   </React.StrictMode>,

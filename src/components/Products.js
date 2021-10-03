@@ -3,18 +3,25 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
 import { guitarProductData } from "./GuitarProductData";
+import { bgImg } from "./bgImages";
 import ProductDetail from "./ProductDetail";
 
 const Products = ({ addCartItem, changeCartCounter }) => {
 
   const match = useRouteMatch();
+
+  const getRandomImage = () => {
+    let rand = Math.floor(Math.random() * 10);
+    return bgImg[rand];
+}
+
   const productList = guitarProductData;
   const productsToRender = productList.map((product) => {
                               return (
                                 <ProductLink to={`${match.url}/${product.id}`} key={product.id}>
                                     <ProductCard
                                       item={product}
-                                      addCartItem={addCartItem}
+                                      img={getRandomImage()}
                                     />
                                 </ProductLink>
                               );
@@ -23,7 +30,7 @@ const Products = ({ addCartItem, changeCartCounter }) => {
     <Wrapper>
         <Switch>
           <Route exact path={match.path}>
-            <ListTitle>GUITARS</ListTitle>
+            <ListTitle>{productList[0].category}</ListTitle>
             {productsToRender}
           </Route>
           <Route path={`${match.path}/:productId`}>
@@ -52,8 +59,10 @@ const ProductLink = styled(Link)`
 
 const ListTitle = styled.div`
   border-bottom: 1px solid #e3e3e377;
-  font-size: 3rem;
-  font-weight: 200;
+  color: #ddd;
+  font-family: 'Montserrat';
+  font-size: 4.2rem;
+  font-weight: 300;
   line-height: 3rem;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;

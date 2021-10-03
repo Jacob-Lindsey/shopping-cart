@@ -1,6 +1,11 @@
-@font-face {
-  font-family: 'Oswald';
-  src: url("./assets/fonts/static/Oswald-Regular.ttf") format("ttf");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;500;600&display=swap');
+
+[data-reactroot] {
+  height: 100% !important;
+  position: absolute !important;
+  width: 100% !important;
 }
 
 a {
@@ -20,16 +25,29 @@ html {
 }
 
 body {
-  background-color: #181a1b;
-  color: #e3e3e3;
+  background-color: #121414;
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color: #eeeeee;
   display: flex;
   justify-content: center;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Oswald',
-    sans-serif;
+    'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::after {
+  content: "";
+  background: url("./images/purty-wood.png");
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
 }
 
 #root {

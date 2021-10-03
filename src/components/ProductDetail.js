@@ -49,9 +49,10 @@ const ProductImage = styled.img`
 `;
 
 const Details = styled.h1`
-    font-size: 3rem;
+    font-size: 2.7rem;
     font-weight: 100;
     margin: 0;
+    text-align: left;
     text-transform: uppercase;
 `;
 
@@ -61,7 +62,6 @@ const DetailsSubtitle = styled.h3`
     margin: 0;
     margin-top: 1rem;
     text-align: left;
-    text-indent: 18%;
     text-transform: uppercase;
     width: 100%;
 `;
@@ -128,9 +128,9 @@ const ImageWrapper = styled.div`
 `;
 
 const InfoWrapper = styled.div`
-    align-items: center;
+    align-items: start;
     display: flex;
     flex-direction: column;
-    flex-basis: 40%;
+    flex-basis: 50%;
     padding: 0.5rem;
 `;
