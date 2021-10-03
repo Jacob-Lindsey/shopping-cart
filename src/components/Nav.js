@@ -13,18 +13,6 @@ function Nav ({ cartSize }) {
             <LinkItem to='/products'>PRODUCTS</LinkItem>
           </ListItemWrapper>
           <ListItemWrapper>
-            <LinkItem to='/'>AMPS</LinkItem>
-          </ListItemWrapper>
-          <ListItemWrapper>
-            <LinkItem to='/'>MODELING</LinkItem>
-          </ListItemWrapper>
-          <ListItemWrapper>
-            <LinkItem to='/'>CABS</LinkItem>
-          </ListItemWrapper>
-          <ListItemWrapper>
-            <LinkItem to='/'>ACCESSORIES</LinkItem>
-          </ListItemWrapper>
-          <ListItemWrapper>
             <LinkItem to='/cart'>CART <span>{cartSize}</span></LinkItem>
           </ListItemWrapper>
         </NavUL>

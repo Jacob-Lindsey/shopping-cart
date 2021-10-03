@@ -1,10 +1,9 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 function Home() {
   return (
     <HomeWrapper>
-      <FullScreenImageWrapper>
-      </FullScreenImageWrapper>
+      <h1>HOME</h1>
     </HomeWrapper>
   );
 }
@@ -13,12 +12,4 @@ export default Home;
 
 const HomeWrapper = styled.div`
   overflow: hidden;
-`;
-
-const FullScreenImageWrapper = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
 `;
